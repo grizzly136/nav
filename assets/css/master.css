@@ -1,0 +1,104 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+
+nav{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  opacity: 0.6;
+  min-height: 7vh;
+
+}
+.logo{
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.5rem;
+  color: aliceblue;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+}
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  color: aliceblue;
+  font-family: 'Yeseva One', cursive;
+  text-decoration: none;
+}
+.burger{
+  margin-right: 1rem;
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+  width: 35px;
+  height: 5px;
+  background-color: aliceblue;
+  margin:5px;
+
+}
+@media screen and (max-width:1150px){
+  .nav-links{
+    width:40%;
+  }
+  } 
+@media screen and (max-width:780px){
+  body{
+    overflow-x: hidden;
+  }
+.nav-links{
+  position: absolute;
+  right: 0px;
+  height: 93vh;
+  top: 7vh;
+  background-color: black;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transform: translateX(100%);
+  transition:all transform 1.5s ease-in;
+
+}
+.nav-links li{
+  opacity: 0;
+}
+.burger{
+  display: block;
+}
+
+} 
+.nav-active{
+  transform: translateX(0%);
+}
+@keyframes navLinkFade{
+  from{
+    opacity:0;
+    transform: translateY(50px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0px);
+  }
+
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transform: rotate(45deg) translate(-5px,-6px);
+
+}
